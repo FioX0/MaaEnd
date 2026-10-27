@@ -1248,6 +1248,9 @@
                             "行动手册",
                             "行動手",
                             "(?i)Operational\\s*Manual",
+                            // EN renders this menu label on two lines; "Operational" is its own OCR box.
+                            // @i18n-skip 完整文本 / full label: "Operational Manual"
+                            "(?i)^Operational$",
                             "案内所",
                             "작전 매뉴얼"
                         ]
@@ -1534,6 +1537,9 @@
                             "(?i)Protocol\\s*Pass",
                             "(?i)Battle\\s*Pass",
                             "(?i)Supply\\s*Pass",
+                            // EN renders this menu label on two lines; "Protocol" is its own OCR box.
+                            // @i18n-skip 完整文本 / full label: "Protocol Pass"
+                            "(?i)^Protocol$",
                             "プロトコルパス",
                             "프로토콜 패스"
                         ]
@@ -2013,6 +2019,9 @@
                     "装备加工",
                     "裝備加工",
                     "(?i)Gear\\s*Assembly",
+                    // EN renders this menu label on two lines; "Gear" is its own OCR box.
+                    // @i18n-skip 完整文本 / full label: "Gear Assembly"
+                    "(?i)^Gear$",
                     "装備加工",
                     "장비 가공"
                 ]
