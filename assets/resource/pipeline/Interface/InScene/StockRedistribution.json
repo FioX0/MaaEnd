@@ -58,6 +58,9 @@
             "好友价格",
             "好友價格",
             "(?i)Friends\\s*'\\s*Prices",
+            // EN renders the panel title singular: "//Friend's Price" (observed 2026-10-27).
+            // @i18n-skip 完整文本 / full label: "Friend's Price"
+            "(?i)Friend\\s*'\\s*s\\s*Price",
             "フレンド価格",
             "친구의 가격"
         ],
