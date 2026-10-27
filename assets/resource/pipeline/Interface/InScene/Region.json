@@ -472,6 +472,9 @@
             "权限等阶",
             "權限等階",
             "Authority Level",
+            // EN menu OCR sometimes drops the trailing "l" (observed 196/241 reads as "Authority Leve").
+            // @i18n-skip 完整文本 / full label: "Authority Level"
+            "(?i)Authority\\s*Leve",
             "行動レベル",
             "권한 등급",
             "探索等级",

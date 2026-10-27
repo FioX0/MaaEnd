@@ -180,7 +180,9 @@
                         "expected": [
                             "任务",
                             "任務",
-                            "(?i)Missions",
+                            // EN shows "Mission" or "Missions" depending on the selected tab.
+                            // @i18n-skip 完整文本 / full label: "Mission"/"Missions"
+                            "(?i)^Missions?$",
                             "任務",
                             "임무"
                         ]
@@ -599,6 +601,9 @@
                             "地区建设",
                             "地區建設",
                             "(?i)Regional\\s*Development",
+                            // EN menu renders this label as one box or two; accept the bare word.
+                            // @i18n-skip 完整文本 / full label: "Regional Development"
+                            "(?i)^Regional(?:\\s+Development)?$",
                             "地域建設",
                             "지역 건설"
                         ]
@@ -1821,7 +1826,7 @@
                 "roi": [
                     0,
                     0,
-                    200,
+                    280,
                     60
                 ],
                 "expected": [
@@ -1873,7 +1878,7 @@
                 "roi": [
                     0,
                     0,
-                    200,
+                    280,
                     60
                 ],
                 "expected": [
@@ -2536,6 +2541,9 @@
                             "采购中心",
                             "採購中心",
                             "(?i)Acquisition\\s*Center",
+                            // EN menu renders this label as one box or two; accept the bare word.
+                            // @i18n-skip 完整文本 / full label: "Acquisition Center"
+                            "(?i)^Acquisition(?:\\s+Center)?$",
                             "購買部",
                             "구매 센터"
                         ]

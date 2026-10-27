@@ -16,8 +16,7 @@
                     // @i18n-skip
                     "基质愿望单",
                     "离开"
-                ],
-                "only_rec": true
+                ]
             }
         },
         "pre_delay": 0,
@@ -41,8 +40,7 @@
                     // @i18n-skip
                     "基質願望清單",
                     "離開"
-                ],
-                "only_rec": true
+                ]
             }
         },
         "pre_delay": 0,
@@ -65,9 +63,11 @@
                     // Leave
                     // @i18n-skip
                     "Essence Wishlist",
-                    "Leave"
-                ],
-                "only_rec": true
+                    "Leave",
+                    // Exit (after-battle rewards)
+                    // @i18n-skip 完整文本 / full label: "Exit"
+                    "(?i)^Exit$"
+                ]
             }
         },
         "pre_delay": 0,
@@ -91,8 +91,7 @@
                     // @i18n-skip
                     "基質厳選リスト",
                     "立ち去る"
-                ],
-                "only_rec": true
+                ]
             }
         },
         "pre_delay": 0,
@@ -116,8 +115,7 @@
                     // @i18n-skip
                     "기질 찜 목록",
                     "떠나기"
-                ],
-                "only_rec": true
+                ]
             }
         },
         "pre_delay": 0,

@@ -13,11 +13,15 @@
             "param": {
                 "roi": [
                     63,
-                    106,
-                    50,
-                    24
+                    104,
+                    140,
+                    28
                 ],
-                "expected": "陌生人",
+                "expected": [
+                    "陌生人",
+                    // @i18n-skip 完整文本 / full label: "Stranger"/"Strangers"
+                    "(?i)^Strangers?$"
+                ],
                 "threshold": 0.7
             }
         },
@@ -138,7 +142,9 @@
                     "好友列表已满",
                     "好友列表已滿",
                     "你的好友列表已满",
-                    "你的好友列表已滿"
+                    "你的好友列表已滿",
+                    // @i18n-skip 完整文本 / full label: "Friends List full. Cannot send more requests."
+                    "(?i)^Friends\\s*List\\s*full\\.?\\s*Cannot\\s*send\\s*more\\s*requests\\.?$"
                 ],
                 "threshold": 0.7
             }
@@ -536,10 +542,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    1151,
-                    648,
-                    55,
-                    26
+                    1100,
+                    642,
+                    160,
+                    36
                 ],
                 "expected": [
                     "换一批",

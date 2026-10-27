@@ -48,7 +48,9 @@
                     "培养舱",
                     "培養艙",
                     "(?i)Growth\\s*Chamber",
-                    "培養室"
+                    "培養室",
+                    // @i18n-skip 完整文本 / full label: "Products claimed from N cabins"
+                    "(?i)Products\\s*claimed"
                 ]
             }
         },
@@ -147,7 +149,9 @@
                     "会客室",
                     "會客室",
                     "(?i)Reception\\s*Room",
-                    "応接室"
+                    "応接室",
+                    // @i18n-skip 完整文本 / full label: "Clue(s) Added"
+                    "(?i)Clue\\(?s\\)?\\s*Added"
                 ]
             }
         },
