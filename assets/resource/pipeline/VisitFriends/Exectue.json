@@ -789,6 +789,9 @@
                         "(?i)Stock\\s*Redistribution\\s*Terminal",
                         "(?i)Stock\\s*Redistrib\\.",
                         "商品取引端末",
+                        // EN interact prompt renders on two lines: "Stock Redistribution" / "Terminal".
+                        // @i18n-skip 完整文本 / full label: "Stock Redistribution Terminal"
+                        "(?i)^Stock\\s*Redistribution$",
                         "물자\\s*관리\\s*단말기"
                     ],
                     "interact_scan": "StockRedistributionTerminalInteractScan",
@@ -826,6 +829,9 @@
             "(?i)Stock\\s*Redistribution\\s*Terminal",
             "(?i)Stock\\s*Redistrib\\.",
             "商品取引端末",
+            // EN interact prompt renders on two lines: "Stock Redistribution" / "Terminal".
+            // @i18n-skip 完整文本 / full label: "Stock Redistribution Terminal"
+            "(?i)^Stock\\s*Redistribution$",
             "물자\\s*관리\\s*단말기"
         ],
         "pre_delay": 0,
