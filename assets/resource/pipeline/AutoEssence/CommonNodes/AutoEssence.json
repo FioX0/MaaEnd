@@ -463,8 +463,7 @@
                 "expected": [
                     // @i18n-skip
                     ""
-                ],
-                "only_rec": true
+                ]
             }
         }
     },
@@ -477,8 +476,7 @@
                 "expected": [
                     // @i18n-skip
                     ""
-                ],
-                "only_rec": true
+                ]
             }
         }
     },
@@ -491,8 +489,7 @@
                 "expected": [
                     // @i18n-skip
                     ""
-                ],
-                "only_rec": true
+                ]
             }
         }
     },
@@ -505,8 +502,7 @@
                 "expected": [
                     // @i18n-skip
                     ""
-                ],
-                "only_rec": true
+                ]
             }
         }
     },
@@ -519,8 +515,7 @@
                 "expected": [
                     // @i18n-skip
                     ""
-                ],
-                "only_rec": true
+                ]
             }
         }
     },
@@ -551,8 +546,7 @@
                         "进发",
                         "迸发"
                     ]
-                ],
-                "only_rec": true
+                ]
             }
         }
     },
