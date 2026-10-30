@@ -668,7 +668,11 @@
             "環境監測終端",
             "(?i)Environment\\s*Monitoring\\s*Terminal",
             "環境観測端末",
-            "환경 관측 단말기"
+            "환경 관측 단말기",
+            // EN renders this title on two lines ("Environment" / "Monitoring Terminal"),
+            // so each word is its own OCR box and the joined pattern can never match.
+            // @i18n-skip 完整文本 / full label: "Environment Monitoring Terminal"
+            "(?i)^Monitoring\\s*Terminal$"
         ]
     },
     "EnvironmentMonitoringInMonitoringTerminal": {
