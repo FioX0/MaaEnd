@@ -345,7 +345,10 @@
                     200
                 ],
                 "template": [
-                    "SceneManager/LoadingIcon.png"
+                    "SceneManager/LoadingIcon.png",
+                    // The loading screen shows a locale-specific logo; the CN icon does not match
+                    // the English one, so the wait never recognised loading on an EN client.
+                    "SceneManager/LoadingIconEnglish.png"
                 ]
             }
         },
