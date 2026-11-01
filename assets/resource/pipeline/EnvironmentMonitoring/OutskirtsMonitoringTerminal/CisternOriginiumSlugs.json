@@ -149,7 +149,8 @@
             "拍攝一群蓄水源石蟲",
             "(?i)Photograph\\s*a\\s*group\\s*of\\s*Cistern\\s*Originium\\s*Slugs",
             "貯水オリジムシの群れの写真を撮る",
-            "저수 원석충 무리를 촬영하기"
+            "저수 원석충 무리를 촬영하기",
+            "(?i)Photograph\\s*the\\s*Cistern\\s*Originium\\s*Slugs"
         ],
         "replace": [],
         "pre_delay": 0,

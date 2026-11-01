@@ -15,6 +15,14 @@ function toFlexibleEnglishRegex(text) {
 // 移动端 OCR 对拍照任务标题里的引号识别不稳定：可能认成别的字符，也可能整个丢掉。
 // 把引号放宽成「任意单字符、可缺省」，落在末尾的那一个直接去掉（后面没有内容可对齐）。
 // 英文已经过 escapeRegex，但它不转义引号，所以各语言的引号都按原字符匹配。
+// 上游 zmdmap 数据（tools/zmdmap/data/environment_monitoring.json）里的英文拍摄目标名
+// 与游戏 UI 实际渲染的文案偶尔不一致。实测 EN 客户端「蓄水源虫」任务文案为
+// "Photograph the Cistern Originium Slugs"，而数据里是 "Photograph a group of ..."。
+// 直接改上游数据会被 `pnpm fetch:zmdmap` 覆盖，故在此按 Id 追加实测到的 UI 文案。
+const IN_EXPECTED_EN_UI_EXTRAS = {
+    CisternOriginiumSlugs: ["Photograph the Cistern Originium Slugs"],
+};
+
 const UNSTABLE_QUOTE_PATTERN = /["'“”‘’「」『』]/g;
 
 function toQuoteTolerantExpected(expected) {
@@ -30,6 +38,14 @@ function buildExpectedFromLocaleMap(localeMap, {looseQuotes = false} = {}) {
         const expected = locale === "en_us" ? toFlexibleEnglishRegex(value) : value;
         return looseQuotes ? toQuoteTolerantExpected(expected) : expected;
     }).filter(Boolean);
+}
+
+function withEnglishUiExtras(id, expected) {
+    const extras = IN_EXPECTED_EN_UI_EXTRAS[id];
+    if (!extras) {
+        return expected;
+    }
+    return [...expected, ...extras.map((text) => toFlexibleEnglishRegex(text))];
 }
 
 function rawJson(value) {
@@ -104,7 +120,10 @@ export function buildRow(mission) {
         MapAssertRecognition: route.MapAssertRecognition,
         MapAssertParam: rawJson(route.MapAssertParam),
         ExpectedText: buildExpectedFromLocaleMap(LocalizedName),
-        InExpectedText: buildExpectedFromLocaleMap(ShotTargetName, {looseQuotes: true}),
+        InExpectedText: withEnglishUiExtras(
+            Id,
+            buildExpectedFromLocaleMap(ShotTargetName, {looseQuotes: true}),
+        ),
         OcrReplace: rawJson(route.Replace),
         TrackOrGoToNext: rawJson(TrackOrGoToNext),
         AfterTrackNext: rawJson(afterTrackNext),
