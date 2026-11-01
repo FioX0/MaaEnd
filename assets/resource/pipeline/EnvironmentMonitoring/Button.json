@@ -11,7 +11,10 @@
         "expected": [
             "开始追踪",
             "開始追蹤",
-            "(?i)Track",
+            // Anchored: unanchored "(?i)Track" also matched "Untrack" and "Stop Tracking",
+            // i.e. the button for the OPPOSITE state. 34 nodes depend on this.
+            // @i18n-skip 完整文本 / full label: "Track"
+            "(?i)^Track$",
             "追跡開始",
             "추적 시작"
         ],
@@ -33,6 +36,9 @@
             "停止追踪",
             "停止追蹤",
             "(?i)Stop\\s*Tracking",
+            // EN renders the already-tracked state as "Untrack".
+            // @i18n-skip 完整文本 / full label: "Untrack"
+            "(?i)^Untrack$",
             "追跡停止",
             "추적 중지"
         ],

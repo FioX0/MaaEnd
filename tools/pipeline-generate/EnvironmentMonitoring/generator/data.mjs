@@ -23,6 +23,13 @@ const IN_EXPECTED_EN_UI_EXTRAS = {
     CisternOriginiumSlugs: ["Photograph the Cistern Originium Slugs"],
 };
 
+// 地图界面的右侧任务面板比任务详情页窄，同一句目标文案会折成两行：
+//   [975,241] "Photograph the Cistern Originium" / [976,258] "Slugs"
+// 折行后整句正则匹配不到，故按行首部分额外给一条锚定正则（已 escape，直接使用）。
+const IN_EXPECTED_EN_UI_RAW = {
+    CisternOriginiumSlugs: ["(?i)^Photograph\\s*the\\s*Cistern\\s*Originium$"],
+};
+
 const UNSTABLE_QUOTE_PATTERN = /["'“”‘’「」『』]/g;
 
 function toQuoteTolerantExpected(expected) {
@@ -45,7 +52,8 @@ function withEnglishUiExtras(id, expected) {
     if (!extras) {
         return expected;
     }
-    return [...expected, ...extras.map((text) => toFlexibleEnglishRegex(text))];
+    const raw = IN_EXPECTED_EN_UI_RAW[id] || [];
+    return [...expected, ...extras.map((text) => toFlexibleEnglishRegex(text)), ...raw];
 }
 
 function rawJson(value) {
