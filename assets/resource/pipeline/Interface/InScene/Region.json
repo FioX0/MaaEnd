@@ -37,7 +37,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "武陵城",
                     "Wuling City",
@@ -53,7 +58,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "景玉谷",
                     "Jingyu Valley",
@@ -69,7 +79,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "清波寨",
                     "Qingbo Stockade",
@@ -85,7 +100,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 //避免将“首墩内部”视为首墩地图
                 "expected": [
                     // @i18n-skip
@@ -103,7 +123,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "试验园区",
                     "Test Area",
@@ -119,7 +144,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "藏剑谷",
                     "Sword Vault Dale",
@@ -135,7 +165,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "应龙关",
                     "Yinglung Pass",
@@ -153,7 +188,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "北部禁区",
                     "North Wuling Exclusion Zone",
@@ -171,7 +211,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "雪松林",
                     "Snowy Forest",
@@ -187,7 +232,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "祀的画",
                     "祀的畫",
@@ -224,7 +274,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "枢纽区",
                     "樞紐區",
@@ -242,7 +297,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "谷地通道",
                     "(?i)Valley\\s*Pass",
@@ -259,7 +319,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "阿伯莉采石场",
                     "阿伯莉採石場",
@@ -277,7 +342,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "源石|研究园",
                     "源石|研究園",
@@ -295,7 +365,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "矿脉源区",
                     "Origin Lodespring",
@@ -313,7 +388,12 @@
             "InMapAny",
             {
                 "recognition": "OCR",
-                "roi": [0, 0, 420, 60],
+                "roi": [
+                    0,
+                    0,
+                    420,
+                    60
+                ],
                 "expected": [
                     "供能高地",
                     "Power Plateau",
