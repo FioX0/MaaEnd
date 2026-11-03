@@ -248,7 +248,10 @@
                 "roi_offset": [
                     -125,
                     -31,
-                    95,
+                    // EN renders this button as "Start Exchange", which overflows a 95px crop —
+                    // OCR returned "Start Excha" and the node could never match. The Chinese
+                    // label also clips on some frames, so 150 is a fix for both.
+                    150,
                     67
                 ],
                 "expected": [
