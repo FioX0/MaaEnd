@@ -396,7 +396,11 @@
                     157
                 ],
                 "expected": [
-                    "生产助力"
+                    "生产助力",
+                    // English renders this as two lines, "Production" over "Assist", so the
+                    // two-word form cannot match; the first line alone is enough here.
+                    // @i18n-skip 完整文本 / full label: "Production Assist"
+                    "(?i)Production"
                 ]
             }
         }
@@ -414,7 +418,12 @@
                     93
                 ],
                 "expected": [
-                    "制造舱"
+                    "制造舱",
+                    // The English client labels the cabin "MFG Cabin I" / "MFG Cabin II" on the
+                    // Control Nexus screen, so the Chinese-only list never matched and the cabin
+                    // was never entered (production rewards skipped silently).
+                    // @i18n-skip 完整文本 / full label: "MFG Cabin"
+                    "(?i)MFG\\s*Cabin"
                 ]
             }
         }
