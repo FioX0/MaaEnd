@@ -56,6 +56,11 @@
                     "生产助力",
                     "生產助力",
                     "Production Assist",
+                    // The English client renders this title in full caps as "// PRODUCTION ASSIST",
+                    // so the case-sensitive pattern above never matched and the assist window was
+                    // treated as not open. Observed 2026-11-04: 21 consecutive misses over 20s.
+                    // @i18n-skip 完整文本 / full label: "Production Assist"
+                    "(?i)Production\\s*Assist",
                     "生産サポート",
                     "생산 지원"
                 ]
