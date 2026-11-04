@@ -246,14 +246,19 @@
         "recognition": {
             "type": "OCR",
             "param": {
+                // 420 wide, not 317: the English title "// PRODUCTION ASSIST" runs past x=317 and
+                // was truncated to "/ / PRODUCTION", so the Chinese-only match failed and the flow
+                // stalled on the open assist window for the full 20s timeout (2026-11-04 20:32).
                 "roi": [
                     0,
                     0,
-                    317,
+                    420,
                     185
                 ],
                 "expected": [
-                    "生产助力"
+                    "生产助力",
+                    // @i18n-skip 完整文本 / full label: "Production Assist"
+                    "(?i)Production\\s*Assist"
                 ]
             }
         },
