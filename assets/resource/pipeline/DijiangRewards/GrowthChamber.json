@@ -260,13 +260,54 @@
             "GrowthChamberGrowViewIn"
         ]
     },
+    "GrowthChamberInSelectTargetTitle": {
+        "desc": "[培养舱·培养] 选择培养对象界面标题（比筛选标签更稳定）",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    10,
+                    620,
+                    40
+                ],
+                "expected": [
+                    "选择培养对象",
+                    "選擇培養對象",
+                    // The filter tab below reads "All" in English and "全部" in Chinese. "全部" is
+                    // read reliably; the three-letter "All" is frequently dropped by OCR, which made
+                    // GrowthChamberGrowViewIn fail and strand the flow after a seed extraction
+                    // (2026-11-04: English stalled for 20s, Chinese proceeded). The screen title is
+                    // long in both languages and reads reliably.
+                    // @i18n-skip 完整文本 / full label: "SELECT MATERIALS TO GROW"
+                    "(?i)SELECT\\s*MATERIALS\\s*TO\\s*GROW",
+                    "(?i)GROWTH\\s*CHAMBER\\s*SELECT"
+                ]
+            }
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "GrowthChamberInSelectTargetAny": {
+        "desc": "[培养舱·培养] 选择对象界面：筛选标签或标题任一命中即可",
+        "recognition": {
+            "type": "Or",
+            "param": {
+                "any_of": [
+                    "GrowthChamberInSelectTarget",
+                    "GrowthChamberInSelectTargetTitle"
+                ]
+            }
+        }
+    },
     "GrowthChamberGrowViewIn": {
         "desc": "[培养舱·培养] 确认已进入培养素材与对象选择界面",
         "recognition": {
             "type": "And",
             "param": {
                 "all_of": [
-                    "GrowthChamberInSelectTarget",
+                    "GrowthChamberInSelectTargetAny",
                     "GrowthChamberInSelectTarget1"
                 ]
             }
