@@ -2,15 +2,24 @@
     "CreditShoppingClaimCredit": {
         "desc": "领取信用点",
         "recognition": "OCR",
+        // Tight crop on the button pill only. The previous crop [26,583,254,137] also caught the
+        // notification badge to the right of the label; when credits are claimable the English
+        // label "Collect Credits" reaches that badge, so the detector merged label+badge into one
+        // tall box (~49px vs ~20px). Clicks are randomised inside the box, so roughly a third of
+        // them landed above the button and the claim never opened. Chinese stops ~33px short of
+        // the badge and never merged, which is why only the English client failed.
+        // CreditShoppingNoCreditClaim keeps the wide roi: its English label "No credits to claim"
+        // is longer than this crop and would be truncated here.
         "roi": [
-            26,
-            583,
-            254,
-            137
+            80,
+            651,
+            110,
+            28
         ],
         "expected": [
             "收取信用",
-            "(?i)Collect\\s*Credits",
+            // "Collect Credit" and not "Collect Credits": this crop truncates the trailing "s".
+            "(?i)Collect\\s*Credit",
             "FP受取"
         ],
         "action": "Click",
