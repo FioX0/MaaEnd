@@ -215,7 +215,12 @@
                 ],
                 "expected": [
                     "暂无附件",
-                    "尚無附件"
+                    "尚無附件",
+                    // The English client shows this as a toast over the message header, and OCR
+                    // merges it with the sender line: "Endfeid IndustrieNlogattachments toclaim".
+                    // The leading "No" and the space in "to claim" are lost, so match the tail.
+                    // @i18n-skip 完整文本 / full label: "No attachments to claim"
+                    "(?i)attachments?\\s*to\\s*claim"
                 ]
             }
         },
