@@ -698,16 +698,7 @@
             }
         },
         "next": [
-            "GrowthChamberGrowViewIn",
-            // After SeedExtractClose the client does not always land on the material-select
-            // screen: in the English client the extra back click goes one screen further and
-            // leaves the chamber on its overview ("// GROWTH CHAMBER" + "Facility Details", with
-            // the plant grid and Growing/Extract Seed buttons). GrowViewIn cannot match that
-            // screen, and with only that in next the flow dead-ended for 20s and failed the task
-            // (2026-11-06 12:15). The overview is recognised perfectly well in English by
-            // GrowthChamberViewIn, so fall through to it and let its own next decide:
-            // claim / grow / exit.
-            "GrowthChamberViewIn"
+            "GrowthChamberGrowViewIn"
         ]
     },
     "GrowthChamberNoMaterials": {
